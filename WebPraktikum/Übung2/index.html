@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formular</title>
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>Angaben</legend>
+            <label>
+            Email:
+            <input type="email" name="email" size="30" value="beispiel@gmail.com">
+            </label><br>
+            
+            <p>Themen
+                <select name="them">
+                    <option value="geocaching"> Geocaching</option>
+                    <option value="bouldern" selected>Bouldern</option>
+                    <option value="sportstacking">Sport Stacking</option>
+                </select>
+            </p>
+            </fieldset>
+            <p>
+                <input type="radio" name="radio" value="abbonieren" checked>abbonieren
+                <input type="radio" name="radio" value="abbestellen">abbestellen
+            </p>
+
+            <button>Daten absenden</button>
+        </form>
+    </body>
+</html>
