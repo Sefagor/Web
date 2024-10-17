@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <title>Tutorial App</title>
+        <title>Formular</title>
     </head>
+
     <body>
-        <header>
-        <h1>Tutorial App</h1>
-        </header>
+        <form>
+            <fieldset>
+                <legend>Angaben</legend>
+            <label>
+            Email:
+            <input type="email" name="email" size="30" value="beispiel@gmail.com">
+            </label><br>
+            
+            <p>Themen
+                <select name="them">
+                    <option value="geocaching"> Geocaching</option>
+                    <option value="bouldern" selected>Bouldern</option>
+                    <option value="sportstacking">Sport Stacking</option>
+                </select>
+            </p>
+            </fieldset>
+            <p>
+                <input type="radio" name="radio" value="abbonieren" checked>abbonieren
+                <input type="radio" name="radio" value="abbestellen">abbestellen
+            </p>
 
-        <main>
-        <nav>
-        <a href="list.html">Liste der Kategorien</a>
-        <label>|</label>
-        <a >Tutorials der Kategorie "X</a>
-        <label>|</label>
-        <a >Details zum Tutorial "Y" </a>
-        </nav>
-
-        <section>
-            <h2>Neue Tutorials</h2>
-            <ul>
-                <li>
-                    Ein schneller Einstieg in die Welt von Node.js, 01.10.2024, 2 Std. 35 Min.
-                </li>
-                <li>
-                    Grundlegende Konzepte und Anwendung von React. 15.09.2024, 3 Std. 10 Min.
-                </li>
-            </ul>
-        </section>   
-        </main>
-
-        <footer>
-            <p>Copyright @2024 UnsereGroup Inc.</p>
-        </footer>
-        
+            <button>Daten absenden</button>
+        </form>
     </body>
 </html>
