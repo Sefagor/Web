@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Liste der Kategorien</title>
+    </head>
+    <body>
+        <header>
+            <h1>Kategorien</h1>
+        </header>
+
+        <main>
+            <form action="search_result.html" method="get">
+                <input type="text" name="suchbegriff"
+                required
+                placeholder="Suchen Sie hier"
+                minlength="4"
+                maxlength="20"
+                pattern="^[A-Z][A-Za-z]*$">
+                <button type="submit">Suchen</button>
+            </form>
+        <nav>
+        <ol>
+           <li><a href="tutorials.html">
+            <img src="images/WebDevelopment.png" alt="Web-Entwicklung" height="100" width="100">
+            </a>
+            <a href="tutorials.html">Web-Entwicklung</a></li>
+
+           <li><a href="tutorials.html">
+            <img src="images/MobileAppDevelopment.jpng.jpg" alt="MobileApp-Entwicklung" height="100" width="100">
+            </a>
+            <a href="tutorials.html">MobileApp-Entwicklung</a></li>
+
+           <li><a href="tutorials.html">
+            <img src="images/GameDevelopment.png" alt="Game-Entwicklung" height="100" width="100">
+            </a>
+            <a href="tutorials.html">Game-Entwicklung</a></li>
+        </ol>
+        </nav>
+        </main>
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+           <main>
+                <section>
+                <form action="https://labs.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php" method="post">
+                    <label for="name">Titel:</label>
+                    <input type="text" name="name"
+                    required
+                    placeholder="Geben Sie das Titel"
+                    minlength="4"
+                    maxlength="20"
+                    pattern="^[A-Z][A-Za-z]*$"><br><br>
+    
+                    <p>
+                        <label for="language">Sprache:</label>
+                        <select id="language" name="language" required>
+                            <option value="">-</option>
+                            <option value="de">Deutsch</option>
+                            <option value="en">Englisch</option>
+                            <option value="es">Spanisch</option>
+                            <option value="fr">Französisch</option>
+                        </select>
+                    </p>
+               
+                        <label for="categories">Kategorie(n):</label>
+                        <input list="category-options" id="categories" name="categories" 
+                               placeholder="Wählen Sie eine Kategorie" 
+                               required 
+                               pattern="^(Kommunikation|Projektmanagement|Web-Entwicklung|MobileApp-Entwicklung|Game-Entwicklung)(, (Kommunikation|Projektmanagement|Web-Entwicklung|MobileApp-Entwicklung|Game-Entwicklung))*$" /> <!-- Muster für festgelegte Kategorien -->
+                        <datalist id="category-options">
+                            <option value="Kommunikation">
+                            <option value="Projektmanagement">
+                            <option value="Web-Entwicklung">
+                            <option value="MobileApp-Entwicklung">
+                            <option value="Game-Entwicklung">
+                        </datalist><br><br>
+             
+                        <label for="description">Beschreibung</label>
+                        <textarea cols="60" rows="8" minlength="40"></textarea><br><br>
+            
+                        <label for="duration">Dauer:</label>
+                        <input type="text" name="duration" required
+                        placeholder="Bitte geben sie die Dauer (MM:SS) an."
+                        pattern="^(0[1-9]|1[0-5]):([0-5][0-9])$"><br><br>
+    
+                        <label for="date">Datum:</label>
+                        <input type="date" name="date" required><br><br>
+
+                        <label for="type">Typ des Tutorials:</label>
+                        <select id="type" name="type" required>
+                            <option value="" disabled selected>Wählen Sie einen Typ</option>
+                            <option value="text">Text-Tutorial</option>
+                            <option value="video">Video-Tutorial</option><br><br>
+                        </select>
+
+                        <label for="content">Inhalt:</label>
+                        <input type="text" id="content" name="content" 
+                            placeholder="Geben Sie die URL oder den Embed-Code ein..." 
+                            required 
+                            maxlength="500" />
+                    </form> 
+                </section>
+            </main>
+           
+    </body>
+</html>
