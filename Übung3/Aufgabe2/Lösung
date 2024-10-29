@@ -1,0 +1,8 @@
+1.Alle h1 elemente haben die Farbe rot.
+2.Alle h1 und h2 elemente sind in Großbuchstaben geschrieben.
+3.(Nicht in HTML genuzt)Die h2, die ein Kind-Element von einer h1 Element sind in Kleinbuchstaben geschrieben.
+4.Alle Elemente der Klasse "hinweis" haben hellblauen Hintergrund.
+5.Das Element mit der id "hinweis" hat einen roten Hintergrund.
+6.Alle Link Elemente mit Link "#" sind grün.
+7.Alle Link-Elemente, die ein Kind-Element von nav sind, werden weiß und haben einen grünen Hintergrund, wenn der Benutzer darauf kommt.
+8.Alle Elemente, die ein id Attribut haben sind kursiv geschrieben.

@@ -1,0 +1,15 @@
+h1 {
+    color:blue;
+}
+
+span::after{
+    content:"™";
+}
+
+#abstract {
+    background-color: red;
+}
+
+.box{
+    background-color: orange;
+}

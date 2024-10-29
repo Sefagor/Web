@@ -1,0 +1,19 @@
+/* Regel 1 */
+h1 { color:red; }
+/* Regel 2 ("text-transform: uppercase" setzt Text in Großbuchstaben) */
+h1, h2 { text-transform: uppercase; }
+/* Regel 3 ("text-transform: lowercase" setzt Text in Kleinbuchstaben) */
+h1 h2 { text-transform: lowercase; }
+/* Regel 4 */
+.hinweis { background-color: lightblue; }
+/* Regel 5 */
+#hinweis { background-color: red; }
+/* Regel 6 */
+a[href^="#"] { color: green; }
+/* Regel 7 */
+nav a:hover {
+background-color: green;
+color: white;
+}
+/* Regel 8 ("font-style: italic" stellt Text kursiv dar) */
+*[id] { font-style: italic; }
