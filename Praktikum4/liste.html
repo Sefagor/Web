@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kategorien</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <main>
+        <fieldset>
+        <fieldset>
+            <legend>Geben sie den Titel ein</legend><br>
+
+        <form action="https://labs.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php" method="GET">
+
+            <input type="text" id="search" name="search" placeholder="Geben sie den Titel des Tutorials ein ..."
+                required minlength="4" maxlength="20" pattern="[A-Z][a-zA-Z\s]+"
+                title="Der Titel muss mit einem Grossbustaben beginnen und darf nur Bustaben enthalten.">
+
+            <button type="submit">Suchen!</button>
+        </form>
+        </fieldset>
+
+        <section>
+            <h3>Verfugbare Kategorien</h3>
+            <ol>
+                <li><a href="tutorials.html">
+                        <img src="assets/img/webanwendungen.png" alt="Wb-technology" width="50" height="25">
+                        Web-Entwicklung
+                    </a></li>
+                    <br>
+                <li><a href="tutorials.html">
+                        <img src="assets/img/codes_image.jpg" alt="Java-Programmierung" width="50" height="25">
+                        Programmierung
+                    </a></li>
+                    <br>
+                <li><a href="tutorials.html">
+                        <img src="assets/img/datenbanken-1200-960x502.jpg" alt="Datenbanken1" width="50" height="25">
+
+                        Datenbanken 1
+                    </a></li>
+
+            </ol>
+        </section>
+    </fieldset>
+        
+    </main>
+</body>
+
+</html>
