@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Neues Tutorial</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+</head>
+
+<body>
+    
+
+    <main>
+        <h3>Neues Tutorial hinzufugen</h3>
+
+        <form action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php" method="POST">
+            <fieldset>
+                <legend>Tutorial-Informationen</legend>
+                <label for="name">Titel:</label>
+                <input type="text" id="name" name="name" required minlength="4" maxlength="20"
+                    pattern="[A-Z][a-zA-Z ]{3,19}" placeholder="Titel des Tutorials"
+                    title="Muss mit einem Grossbustaben beginnen, 4-20 Zeichen">
+            </fieldset>
+
+            <fieldset>
+                <label for="language"> Sprache:</label>
+                <select id="language" name="language" required>
+                    <option value="">-</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en">Englisch</option>
+                    <option value="es">Spanisch</option>
+                    <option value="fr">Franzosisch</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label for="categories">Kategorie(n):</label>
+                <input type="text" id="categories" name="categories" pattern="^[^,]+(,[^,]+)*$"
+                    placeholder="Beispiel: kommunication, Projektmanagement" required />
+            </fieldset>
+
+            <fieldset>
+                <label for="description">Beschreibung</label>
+                <textarea id="description" name="description" minlength="40"
+                    placeholder="Geben sie hier eine kurze Beschreibung ein" required></textarea>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Zusätzliche Informationen</legend>
+                <label for="duration">Dauer:</label>
+                <input type="text" id="duration" name="duration" pattern="^\d{2}:\d{2}$" placeholder="MM:SS" required />
+            </fieldset>
+
+            <fieldset>
+                <label for="date">Veroffentlichung(Datum)</label>
+                <input type="date" id="date" name="date" required />
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Data Informationen</legend>
+                <label for="type">Inhalttyp:</label>
+                <select id="type" name="type" required>
+                    <option value="" disabled selected>Bitte auswahlen</option>
+                    <option value="text">Text-tutorial</option>
+                    <option value="video">Video-tutorial</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <label for="content">Inhalt (URL oder Embed-code)</label>
+                <input type="text" id="content" name="content" placeholder="URL oder Embed-code hier einfugen"
+                    required />
+            </fieldset>
+
+            <button type="submit">Totorial hinzufugen</button>
+
+        </form>
+    </main>
+</body>
+
+</html>
