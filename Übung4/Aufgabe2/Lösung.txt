@@ -1,0 +1,36 @@
+1.  Regel 1: (0,0,1,1) Nicht Inline-Style, Kein ID, 1 Attributselector([class]), 1 Typselector(p)
+    Regel 2: (0,1,1,1) Nicht Inline-Style, 1 ID(#einleitung), 1 Attributselector([class]), 1 Typselector(p)
+    Regel 3: (0,1,1,2) Nicht Inline-Style, 1 ID(#einleitung), 1 Klasse(.hinweis), 2 Typselectoren(section, p)
+    Regel 4: (0,0,1,1) Nicht Inline-Style, Kein ID, 1 Attributselector([id]), 1 Typselector(h2)
+    Regel 5: (0,0,0,2) Nicht Inline-Style, Kein ID, Keine Attributselector oder Klasse, 2  Typselectoren(section, h2)
+    Regel 6: (1,0,1,1) Inline-Style, Kein ID, 1 Klasse(.hinweis), 1 Typselector(p)
+    Regel 7: (1,0,0,0) Inline-Style, Kein ID, Kein Attributselector oder Klasse, keine Typselektor oder Pseudoelement
+
+2.
+Regel 1: p[class]
+Setzt für alle p-Elemente mit einem class-Attribut eine rote, durchgehende Umrandung und kursiven Text.
+Diese Regel hat Auswirkung auf die p.hinweis-Elemente. Beide p.hinweis-Elemente bekommen eine rote Umrandung und kursiven Text.
+
+Regel 2: #einleitung p[class]
+Setzt die Textfarbe der p-Elemente mit einem class-Attribut im #einleitung-Abschnitt auf Blau.
+Diese Regel beeinflusst nur den ersten p.hinweis-Absatz innerhalb des #einleitung-Abschnitts und setzt seine Textfarbe auf Blau.
+
+Regel 3: section#einleitung p.hinweis
+Setzt die Textfarbe für p.hinweis-Elemente innerhalb des section-Elements mit der ID #einleitung auf Orange.
+Diese Regel überschreibt die vorherige Regel (Regel 2) und setzt die Textfarbe des ersten p.hinweis-Absatzes im #einleitung-Abschnitt auf Orange.
+
+Regel 4: *[id] h2
+Setzt die Textfarbe aller h2-Elemente, die Nachkommen von Elementen mit einem id-Attribut sind, auf Gold.
+Diese Regel setzt die Textfarbe aller h2-Elemente innerhalb von Elementen mit einem id-Attribut auf Gold, aber sie wird durch spezifischere Regeln (Regel 5 und Regel 7) überschrieben.
+
+Regel 5: section > h2
+Setzt die Textfarbe der h2-Elemente, die direkte Kinder von section-Elementen sind, auf Rot.
+Diese Regel setzt die Textfarbe der h2-Elemente in beiden section-Abschnitten auf Rot. Jedoch wird die Farbe des h2 im #einleitung-Abschnitt durch den Inline-Stil (Regel 7) überschrieben.
+
+Regel 6: p.hinweis
+Setzt die Rahmenlinie der p.hinweis-Elemente auf eine blaue, gestrichelte Linie mit einer Breite von 2 Pixeln.
+Diese Regel hat eine direkte Auswirkung auf die Darstellung der p.hinweis-Elemente. Beide p.hinweis-Elemente haben eine blaue, gestrichelte Rahmenlinie.
+
+Regel 7: Inline-Stil (h2)
+Setzt die Farbe des h2-Elements im #einleitung-Abschnitt auf Grün.
+Diese Regel hat die höchste Priorität und setzt die Textfarbe des h2-Elements im #einleitung-Abschnitt auf Grün, wodurch Regel 4 und Regel 5 für dieses Element überschrieben werden.

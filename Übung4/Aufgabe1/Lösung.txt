@@ -1,0 +1,3 @@
+1. Alle css Eingenschaften bewirken.
+2. 100px width + 5px Padding + 6px 6 margin = 111px
+3. Breite wird total 100px, dh. ohne Innenabstand, ohne Rahmen und ohne Außenabstand Breite ist 89px

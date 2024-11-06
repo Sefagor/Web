@@ -1,0 +1,14 @@
+/* Weil diese body Element nach die Andere herstellt wird, überschreibt die Andere*/
+body{
+    font-family: Arial,sans-serif; 
+} 
+
+/* Weil die andere Border Attribute Innen-Style ist, ist !important die einzige Lösung */
+article{
+    border: 5px solid black !important;
+}
+
+/* Weil die andere Color Attribute Innen-Style ist, ist !important die einzige Lösung */
+h1 {
+    color: orange !important;
+}
