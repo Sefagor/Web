@@ -1,0 +1,77 @@
+main{
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #767575; 
+    
+}
+
+h3{
+    color: #ffffff;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: inline;
+}
+
+legend{
+    color: #ffffff;
+    background-color: #2E8B57;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 4px;
+}
+
+label{
+    color: white;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid #2E8B57;
+    background-color: #767575;
+    color: #ffffff;
+}
+
+input::placeholder{
+    color: #414141;
+}
+
+input:invalid{
+    border-bottom: 2px solid rgb(211, 42, 42);
+}
+
+select:invalid,
+textarea:invalid {
+    border: 2px solid rgb(211, 42, 42);  
+}
+
+
+
+.reg::after{
+    content: " (Erforderliches Feld)";
+    color: rgb(211, 42, 42); 
+    font-size: 12px; 
+    margin-left: 5px;
+}
+
+button{
+    background-color: #2E8B57;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 2px 0px 2px 0px solid black;
+    box-shadow: #2E8B57;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color: #2E8B57;
+}
+
+
+
