@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kategorien</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/flexbox.css" media="screen and (max-width:768px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+
+    <main id="listmain">
+        <fieldset id="tutorialsuche">
+            <legend>Suchen</legend><br>
+
+        <form action="https://labs.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php" method="GET">
+
+            <label>
+                Name:
+                <input type="text" id="search" name="search" placeholder="Geben sie den Titel des Tutorials ein ..."
+                required minlength="4" maxlength="20" pattern="[A-Z][a-zA-Z\s]+"
+                title="Der Titel muss mit einem Grossbustaben beginnen und darf nur Bustaben enthalten.">
+
+            <button type="submit">Suchen!</button>
+            </label>
+        </form>
+        </fieldset>
+
+        <h3>Verfugbare Kategorien</h3>
+            
+        <section id="tutorials">
+                <fieldset class="listtutorial">
+                    <img src="assets/img/webanwendungen.png" alt="Wb-technology" width="100" height="100">
+                <a href="tutorials.html">
+                       <p style="font-size: 12px;"> Web-Entwicklung</p>
+                    </a>
+                    <br>
+                </fieldset>
+                <fieldset class="listtutorial">
+                    <img src="assets/img/codes_image.jpg" alt="Java-Programmierung" width="100" height="100">
+                <a href="tutorials.html">
+                        <p style="font-size: 12px;">Programmierung</p>
+                    </a>
+                    <br>
+                </fieldset>
+                <fieldset class="listtutorial">
+                <img src="assets/img/datenbanken-1200-960x502.jpg" alt="Datenbanken1" width="100" height="100">
+                <a href="tutorials.html">
+                        <p style="font-size: 12px;">Datenbanken 1</p>
+                    </a>
+                </fieldset>
+                <fieldset class="listtutorial">
+                    <img src="assets/img/codes_image.jpg" alt="Java-Programmierung" width="100" height="100">
+                <a href="tutorials.html">
+                        <p style="font-size: 12px;">Programmierung</p>
+                    </a>
+                    <br>
+                </fieldset>
+        </section>
+    </fieldset>
+        
+    </main>
+</body>
+
+</html>
