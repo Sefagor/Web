@@ -1,0 +1,8 @@
+BUTTON1
+section geklickt!
+script.js:17 button1 geklickt!
+
+BUTTON2
+script.js:4 section geklickt!
+script.js:14 button2 geklickt!
+script.js:9 p geklickt! 
