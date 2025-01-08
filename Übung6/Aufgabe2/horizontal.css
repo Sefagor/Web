@@ -1,0 +1,38 @@
+header, nav, main, aside, footer {
+    border: 1px solid white;
+    background-color: orange;
+    padding: 15px;
+    text-align: center;
+    font-size: 4em;
+    }
+    body {
+    margin: 0;
+    height: 100vh;
+    }
+
+body{
+    display: grid;
+    grid-template: 10% 80% 10% / 20% 60% 20%;
+}
+
+#mainnav{
+    grid-column: 2 / 4;
+}
+
+#subnav{
+    grid-row: 2 / 3;
+}
+
+aside{
+    grid-row: 2 / 3;
+}
+
+main{
+    grid-column:2 / 3;
+    grid-row: 2 / 3;
+}
+
+footer{
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}

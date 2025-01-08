@@ -1,0 +1,18 @@
+body{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 20% 60% 20%;
+}
+
+#mainnav{
+    grid-column:2 /4;
+}
+
+main{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+footer{
+    grid-column: 1/4;
+}

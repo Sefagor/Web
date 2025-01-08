@@ -1,0 +1,15 @@
+/* Weil diese body Element nach die Andere erstellt wird, 
+    überschreibt die Andere Spesifität(0,0,0,1)*/
+body{
+    font-family: Arial,sans-serif; 
+} 
+
+/* Die andere Regel hat Spesifität (0,0,1,1) diese Regeln hat Spesifität (0,0,1,2)*/
+body article.art{
+    border: 5px solid black;
+}
+
+/* Weil die andere h1 Regel Innen-Style ist, ist !important die einzige Lösung */
+h1 {
+    color: orange !important;
+}

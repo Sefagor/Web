@@ -1,0 +1,12 @@
+header, nav, main, aside, footer {
+    border: 1px solid white;
+    background-color: orange;
+    padding: 15px;
+    text-align: center;
+    font-size: 4em;
+    }
+    body {
+    margin: 0;
+    height: 100vh;
+    }
+    

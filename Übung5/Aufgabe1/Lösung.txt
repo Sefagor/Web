@@ -1,0 +1,16 @@
+1. Im Browser werden zwei Boxen mit den Texten "Box 1" und "Box 2" untereinander dargestellt. Und die CSS Eigenschaften lautet:
+    ->100 px Width: Setzt die Breite von Box 100px.
+    ->100 px Height: Setzt die Höhe von Box 100px.
+    ->padding-left 5px: Fügt 5px Innenabstand auf der linken Seite von Box hinzu.
+    ->padding-tpo 5px: Fügt 5px Innenabstand oben von Box hinzu.
+    ->border 3px: Fügt ein 3px breit Rahmen um Box hinzu.
+    ->background: linear-gradient(to bottom
+      right, white, rgb(0,0,255)):
+      Setzt einen Hintergrund, der als Farbverlauf von Weiß zu (RGB: 0,0,255)(Blau) von der linken oberen zur rechten unteren Ecke verläuft.
+    ->6px margin: Fügt 6 Pixel Außenabstand um das div hinzu.
+    ->text-align center: Zentriert den Text horizontal innerhalb des div.
+    ->font-weight bold: Setzt den Text in Bold.
+    ->border-radius 5px 15px: Macht die Ecken des div abgerundet, wobei die obere linke und untere rechte Ecke einen Radius von 5 Pixeln haben, die obere rechte und untere linke Ecke einen Radius von 15 Pixeln.
+    ->text-transform uppercase: Wandelt den Text in Großbuchstaben um.
+2. 100px width + 5px Padding-left + 6px Border +6px margin-left + 6px margin-right = 111px.
+3. Breite wird total 100px, dh. ohne Innenabstand, ohne Rahmen und ohne Außenabstand Breite(also Inhalt)ist 89px.
