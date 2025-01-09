@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= tutorial.name %> - Tutorial</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <h2>Details zum Tutorial: <%= tutorial.name %></h2>
+
+        <section>
+            <h3>Allgemeine Informationen</h3>
+            <div class="tutorial-info">
+                <p><strong>Datum:</strong> <%= tutorial.datum %></p>
+                <p><strong>Dauer:</strong> <%= tutorial.dauer %></p>
+                <p><strong>Beschreibung:</strong> <%= tutorial.beschreibung %></p>
+                <% if (tutorial.bild && tutorial.bild.url) { %>
+                    <img src="<%= tutorial.bild.url %>" alt="<%= tutorial.name %>" width="100" height="50">
+                <% } else { %>
+                    <img src="/img/webanwendungen.png" alt="Placeholder Image" width="100" height="50">
+                <% } %>
+            </div>
+        
+            <% if (tutorial.type === "video") { %>
+                <h3>Video Tutorial</h3>
+                <video width="600" height="300" controls>
+                    <source src="/vid/tutorialvideo.mp4" type="video/mp4">
+                </video>
+        
+                <h3>Kapitel</h3>
+                <table>
+                    <tr>
+                        <th>Kapitel</th>
+                        <th>Beschreibung</th>
+                        <th>Dauer</th>
+                    </tr>
+                    <% tutorial.kapitelliste.forEach(kapitel => { %>
+                        <tr>
+                            <td><%= kapitel.name %></td>
+                            <td><%= kapitel.beschreibung %></td>
+                            <td><%= kapitel.dauer %></td>
+                        </tr>
+                    <% }); %>
+                </table>
+            <% } else { %>
+                <h3>Text Tutorial</h3>
+                <p><%= tutorial.beschreibung %></p>
+            <% } %>
+        </section>
+        
+    </main>
+</body>
+
+</html>
+
+  

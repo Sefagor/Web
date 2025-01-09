@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <h2>Tutorials der Kategorie: <%= search %></h2>
+
+        <% if (tutorials.length > 0) { %>
+            <% tutorials.forEach(tutorial => { %>
+                <section class="tutorialSection">
+                    <fieldset>
+                        <legend>
+                            <h2><a href="/tutorial/<%= tutorial.name %>" class="tutorialTitel"><%= tutorial.name %></a></h2>
+                        </legend>
+                        <img src="<%= tutorial.bild.url %>" alt="<%= tutorial.name %>" width="50" height="25">
+                        <div class="tutorial-info">
+                            <p><strong>Datum:</strong> <%= tutorial.datum %></p>
+                            <p><strong>Dauer:</strong> <%= tutorial.dauer %></p>
+                            <p><strong>Beschreibung:</strong> <%= tutorial.beschreibung %></p>
+                            <a href="/tutorial/<%= tutorial.name %>">Mehr Details</a>
+                        </div>
+                    </fieldset>
+                </section>
+            <% }); %>
+        <% } else { %>
+            <p>Keine Tutorials gefunden.</p>
+        <% } %>
+    </main>
+</body>
+
+</html>
