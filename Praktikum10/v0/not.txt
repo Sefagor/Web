@@ -1,0 +1,72 @@
+const parsedUrl = url.parse(req.url, true);
+
+  // Serve static files (images, css, js)
+  if (req.url.startsWith('/assets/')) {
+    const filePath = path.join(__dirname, '..', 'v0', req.url);  // Go to v0 for assets
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('File not found');
+      } else {
+        res.writeHead(200, { 'Content-Type': 'application/octet-stream' });
+        res.end(data);
+      }
+    });
+    return;
+  }
+
+  // Handle tutorial search and rendering
+  if (req.method === 'GET' && req.url.startsWith('/submit')) {
+    const queryParams = parsedUrl.query;
+
+    if (queryParams) {
+      const gesuchteTutorials = tutorials.filter(tutorial =>
+        tutorial.name.toLowerCase().includes(queryParams.search.toLowerCase())
+      );
+
+      let template = '';
+
+      if (gesuchteTutorials.length > 0) {
+        gesuchteTutorials.forEach(tutorial => {
+          console.log(tutorial);
+          template += `
+            <section class="tutorialSection">
+                <img src="/assets/img/${tutorial.bild}" alt="${tutorial.name}" width="50" height="25">
+                <h2><a href="/v0/tutorial.html" class="tutorialTitel">${tutorial.name}</a></h2>
+                <div class="tutorial-info">
+                    <p><strong>Datum:</strong> ${tutorial.datum}</p>
+                    <p><strong>Dauer:</strong> ${tutorial.dauer}</p>
+                    <p><strong>Beschreibung:</strong> ${tutorial.beschreibung}</p>
+                    <a href="tutorial.html">Mehr Details</a>
+                </div>
+            </section>
+          `;
+        });
+      } else {
+        template = '<p>Keine Tutorials gefunden.</p>';
+      }
+
+      const filePath = path.join(__dirname, '..', 'v0', 'tutorials.html');
+
+      fs.readFile(filePath, 'utf-8', (err, htmlContent) => {
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          res.end('Fehler beim Laden der Datei.');
+        } else {
+          const updatedHtml = htmlContent
+            .replace('{{search}}', queryParams.search || '')
+            .replace('{{template}}', template);
+
+          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+          res.end(updatedHtml);
+        }
+      });
+    } else {
+      res.writeHead(400, { 'Content-Type': 'text/plain' });
+      res.end('Fehler: Keine Formulardaten empfangen.');
+    }
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Seite nicht gefunden.');
+  }
+});
